@@ -67,7 +67,7 @@ const cars = [
 const gasolineCars = cars.filter((auto) => auto.type === 'benzina'); // invertito > e =
 
 const dieselCars = cars.filter((auto) => {
-    auto.type === 'diesel';
+    return auto.type === 'diesel';
 });
 
 const otherCars = cars.filter((auto) => {
