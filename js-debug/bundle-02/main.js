@@ -13,7 +13,7 @@
 // ESERCIZIO 1
 function checkAge() {
     const myAge = 32;
-    let message; // rimosso il template literal
+    let message; // rimosso il template literal e cambiato in let
 
     if (myAge < 18) {
         message = `Sei troppo giovane! Hai ${myAge} anni!`;
