@@ -1,24 +1,24 @@
 const input = document.querySelector('input');
-const array = null;
+const array = []; // rimosso il null e aggiunto []
 
 input.addEventListener('keypress', function(event) {
 
     if (event.code != 'Enter')    return;
-    if (input.value.length == '') return;
+    if (input.length == '') return; // rimosso value
 
-    array.add(input.value);
+    array.push(input.value); // rimosso add e aggiunto push
 
     const li = document.createElement('li');
     li.classList.add('list-group-item');
-    li.text = input.value;
-    document.querySelector('ul').push(li);
+    li.innerText = input.value; // rimosso text e aggiunto innerHTML
+    document.querySelector('ul').append(li); //rimosso push e aggiunto append
 
-    let counter = '';
+    let counter = 0; // rimosso '' e aggiunto 0
     let item    = array[0];
-    const max   = 1;
+    let max   = 1; //cambiare let in const
     const elems = [];
 
-    for (let i = 0; i < array; i++) {
+    for (let i = 0; i < array.length; i++) { //aggiunto lenght dopo array
         let val = array[i];
 
         if (!elems[val]) {
@@ -27,19 +27,20 @@ input.addEventListener('keypress', function(event) {
             elems[val]++;
         }
 
-        for (let j = i; j < array.length; i++) {
+        for (let j = i; j < array.length; j++) { // rimosso i e aggiunto j
             if (array[i] == array[j]) {
                 counter++;
-                if (max < counter)
+                if (max < counter){ // aggiunto parentesi graffe
                 max  = counter;
                 item = array[i];
+            }
             }
         }
 
         counter = 0;
     }
 
-    const alert = document.getElementsByClassName('alert');
+    const alert = document.querySelector('.alert'); //rimosso getElementsByClassName e aggiunto querySelector
 
     alert.classList.remove('d-none');
     alert.classList.add('d-flex');
@@ -47,5 +48,5 @@ input.addEventListener('keypress', function(event) {
     alert.querySelector('span:first-child').innerText = item;
     alert.querySelector('span:last-child').innerText = max;
 
-    console.log('${item} trovato ${max} volte');
+    console.log(`${item} trovato ${max} volte`); //rimosso ' e aggiunto `
 });
