@@ -11,8 +11,10 @@
 
 
 // ESERCIZIO 1
+
+
 function checkAge() {
-    const myAge = 32;
+    const myAge = parseInt(prompt("Inserisci la tua età"));
     let message; // rimosso il template literal e cambiato in let
 
     if (myAge < 18) {
