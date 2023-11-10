@@ -31,7 +31,7 @@ console.log(checkAge());
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
 
-    console.log(`Nella mia palette ci sono ${parseInt(colors.length)} colori!`); // riscritto length e aggiunto parseInt
+    console.log(`Nella mia palette ci sono ${(colors.length)} colori!`); // riscritto length
 
 };
 
