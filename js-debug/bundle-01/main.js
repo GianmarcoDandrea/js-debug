@@ -32,6 +32,7 @@ function addIfEven(num) {
 // ESERCIZIO 3
 
 console.log(loopToFive());
+
 function loopToFive() {
     for (let i = 0; i < 6; i++) {// rimosso , e messo ; tolto il 5 messo il 6 per far arrivare il ciclo a 5
         console.log(i);
@@ -41,7 +42,6 @@ function loopToFive() {
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
 
-displayEvenNumbers()
 console.log(displayEvenNumbers()); // dovrebbe restituire [2,4,6,8]
 
 function displayEvenNumbers() {
@@ -50,7 +50,7 @@ function displayEvenNumbers() {
     let evenNumbers = [];
     for (let i = 0; i < numbers.length; i++) { //rimosso ; finale e tolto - 1 alla condizione centrale
 
-        if ((numbers[i] % 2) === 0); { // aggiunto simbolo ugualianza e [i] dopo il numbers
+        if ((numbers[i] % 2) === 0) { // aggiunto simbolo ugualianza e [i] dopo il numbers e rimosso ;
 
             evenNumbers.push(numbers[i]); //aggiunto numbers[i]
 

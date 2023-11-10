@@ -13,32 +13,39 @@
 // ESERCIZIO 1
 function checkAge() {
     const myAge = 32;
-    const message = '';
+    let message; // rimosso il template literal
 
     if (myAge < 18) {
         message = `Sei troppo giovane! Hai ${myAge} anni!`;
     } else {
         message = 'Hai più di 18 anni!';
     }
+    return message // aggiunto return
 }
-checkAge();
+
+console.log(checkAge());
 
 // ESERCIZIO 2
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
-    console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
-}
-printColorsNumber();
+
+    console.log(`Nella mia palette ci sono ${parseInt(colors.length)} colori!`); // riscritto length e aggiunto parseInt
+
+};
+
+console.log(printColorsNumber())
 
 
 // ESERCIZIO 3
 function addNumbers() {
-    const userNumber = prompt('Inserisci un numero');
-    const total = userNumber + 12;
+    const userNumber = parseInt(prompt('Inserisci un numero'));// aggiunto parseInt
+    let total = userNumber + 12;
 
     console.log(`Il risultato finale è ${total}`);
+
+
+    return total // aggiunto return
 }
-addNumbers();
 
 
 // ESERCIZIO 4
@@ -52,11 +59,12 @@ function checkAccess() {
         grantAccess = 'true';
     }
 
-    if (grantAccess === true) {
+    if (grantAccess === 'true') { // aggiunto apici altrimenti il valore è booleano
         console.log('Accesso consentito!');
     } else {
         console.log('Accesso negato!');
     }
+    return grantAccess // aggiunto return
 }
 checkAccess();
 
@@ -78,7 +86,6 @@ function checkAccessImproved() {
                 grantAccess = 'true';
 
             }
-
         }
 
         if (grantAccess) {
@@ -87,9 +94,10 @@ function checkAccessImproved() {
             console.log('Accesso negato!');
         }
     }
-    checkAccessImproved();
 
+}// messo parentesi graffa
 
+console.log(checkAccessImproved());
 
 
 
